@@ -1,3 +1,14 @@
 {
-  "news": []
+  "news": [
+    {
+      "code": "655818484766",
+      "icon": "https://www.dislist.me/img/logo.png",
+      "banner": "https://media.discordapp.net/attachments/832615475878821939/861598860006522890/wallpaper.jpg?width=1246&height=701",
+      "ownerID": "676195747904880690",
+      "serverName": "DisList.Me Revamp",
+      "date": "7/27/2021, 7:52:21 PM",
+      "description": "As You May Have Noticed We Have Changed Things Around And Are Proud To Release Our Amazing DisList.Me Site Too All! We Do Hope You Appreciate It And Please Keep In Mind Alot Of Works Currently Being Done So Please Be Patience! ",
+      "views": 0
+    }
+  ]
 }

@@ -10,6 +10,7 @@
                     prefix: ""
                 }
             },
+    mongourl: "mongodb+srv://iut3890g:6BclYy2yHqvs3hKQ@cluster0.sbr9d.mongodb.net/listing?retryWrites=true&w=majority",
         
             website: {
                 callback: "",

@@ -3,7 +3,7 @@ const botsdata = require("../database/models/botlist/bots.js");
 const db = require("../database/models/servers/server.js");
 const maintenceSchema = require('../database/models/maintence.js');
 
-console.log("[disbots.xyz]: Index router loaded.");
+console.log("[DisList.Me]: Index router loaded.");
 
 
 app.get("/", async (req,res) => {

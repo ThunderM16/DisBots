@@ -3,7 +3,7 @@ const Database = require("void.db");
 const path = require("path")
 const db = new Database(path.join(__dirname, '../database/json/partners.json'));
 
-console.log("[disbots.xyz]: Partners router loaded.");
+console.log("[DisList.Me]: Partners router loaded.");
 
 app.get("/partners", async (req,res) => {
     res.render("partners.ejs", {

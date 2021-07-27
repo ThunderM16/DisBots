@@ -16,7 +16,7 @@ client.komutlar = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir("./src/commands", (err, files) => {
     if (err) console.error(err);
-    console.log(`[disbots.xyz]: ${files.length} command loaded.`);
+    console.log(`[dislist.me]: ${files.length} command loaded.`);
     files.forEach(f => {
         if (!f.endsWith('.js')) return
         let props = require(`./src/commands/${f}`);
@@ -159,10 +159,10 @@ require("./src/database/connect.js")(client);
 
 client.login(config.bot.token);
 client.on('ready',async () => {
-    console.log("[disbots.xyz]: Bot successfully connected as "+client.user.tag+".");
+    console.log("[dislist.me]: Bot successfully connected as "+client.user.tag+".");
     let botsSchema = require("./src/database/models/botlist/bots.js");
     const bots = await botsSchema.find();
-    client.user.setPresence({ activity: { type: 'WATCHING', name: 'disbots.xyz | '+bots.length+' bots' }, status: "online" });
+    client.user.setPresence({ activity: { type: 'WATCHING', name: 'dislist.me | '+bots.length+' bots' }, status: "online" });
 });
 /*=======================================================================================*/
 
@@ -205,6 +205,6 @@ client.on('ready', async () => {
                 }
             })
         })
-    }, null, true, 'Europe/Istanbul');
+    }, null, true, 'America/Toronto');
     resetStats.start();
 })

@@ -16,7 +16,7 @@ serverClient.commands = new Discord.Collection();
 serverClient.aliases = new Discord.Collection();
 fs.readdir("./src/servers/commands/", (err, files) => {
   if (err) console.error(err);
-  console.log(`[disbots.xyz/servers]: ${files.length} command loaded.`);
+  console.log(`[dislist.me/servers]: ${files.length} command loaded.`);
   files.forEach(async f => {
     let props = require(`./commands/${f}`);
     serverClient.commands.set(props.help.name, props);
@@ -45,10 +45,10 @@ serverClient.on('message', async message => {
 
 
 serverClient.on('ready',async () => {
-    console.log("[disbots.xyz/servers]: Bot successfully connected as "+serverClient.user.tag+".");
+    console.log("[dislist.me/servers]: Bot successfully connected as "+serverClient.user.tag+".");
     let serversdata = require("../../src/database/models/servers/server.js");
     const servers = await serversdata.find();
-    serverClient.user.setPresence({ activity: { type: 'WATCHING', name: + servers.length+' Servers | disbots.xyz/servers' }, status: "dnd" });
+    serverClient.user.setPresence({ activity: { type: 'WATCHING', name: + servers.length+' Servers | dislist.me/servers' }, status: "dnd" });
 });
 
 serverClient.makeid = length => {

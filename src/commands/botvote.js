@@ -36,11 +36,11 @@ module.exports.run = async (client, message, args) => {
     let botdata = await botsdata.findOne({ botID: bot.id });
     await votes.findOneAndUpdate({ bot: bot.id, user: message.author.id }, { $set: { Date: Date.now(), ms: 43200000 } }, { upsert: true })
     await botsdata.findOneAndUpdate({ botID: bot.id }, { $inc: { votes: 1 } })
-    client.channels.cache.get("859637442499969074").send(`**${botdata.username}** just got **+1 Vote** from **${message.author.username}** **\`(Total Votes ${botdata.votes + 1})\`**`)
+    client.channels.cache.get("869620039270166548").send(`**${botdata.username}** just got **+1 Vote** from **${message.author.username}** **\`(Total Votes ${botdata.votes + 1})\`**`)
     let web = new MessageButton()
       .setLabel("Visit bot page")
       .setStyle("url")
-      .setURL("https://disbots.xyz/bot/"+botdata.botID)
+      .setURL("https://dislist.me/bot/"+botdata.botID)
     const vote = new Discord.MessageEmbed()
     .setTitle("Voted")
     .setColor("GREEN")
@@ -57,7 +57,7 @@ module.exports.run = async (client, message, args) => {
   let web = new MessageButton()
     .setLabel("Visit bot page")
     .setStyle("url")
-    .setURL("https://disbots.xyz/bot/"+botdata.botID)
+    .setURL("https://dislist.me/bot/"+botdata.botID)
   const vote = new Discord.MessageEmbed()
 	.setTitle("Voted")
 	.setColor("GREEN")
@@ -70,7 +70,7 @@ module.exports.run = async (client, message, args) => {
     const webhook = require("webhook-discord");
     const Hook = new webhook.Webhook(botdata.dcwebhook);
     const msg = new webhook.MessageBuilder()
-      .setName("Disbots Bot List Discord Webhooks")
+      .setName("DisList.Me Bot List Discord Webhooks")
       .setAvatar("https://cdn.discordapp.com/icons/852825880271257611/bf26f2b197897f38db173afb9b73a22e.webp?size=256")
       .setTitle(`${votedbot.username} Has just been Voted!!`)
       .setDescription(`Voter: ${message.author.username} Bot: ${votedbot.username} Total Votes: ${botdata.votes + 1}`)

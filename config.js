@@ -1,19 +1,19 @@
 module.exports = {
   bot: {
-    token: "BOT-TOKEN",
-    prefix: "PREFIX",
-    owners: ["OWNER-ID","OWNER-ID"],
-    mongourl: "MONGO-URL",
+    token: "ODQwOTIyOTYwMTU1NzcwOTAw.YJfQiQ.XXjyE4lTUE0fRI4RVUofukfiZAc",
+    prefix: "bl.",
+    owners: ["676195747904880690"],
+    mongourl: "mongodb+srv://iut3890g:6BclYy2yHqvs3hKQ@cluster0.sbr9d.mongodb.net/testing2?retryWrites=true&w=majority",
     servers: {
-      token: "SERVER-LIST-BOT-TOKEN",
-      prefix: "PREFIX-FOR-SERVER-LIST-BOT"
+      token: "ODMyNDMzODQ5NzU3MzM1NTU0.YHjubw.NhIyqQZkvV_uvTdCSVOD0R26c5c",
+      prefix: "sl."
     }
   },
 
   website: {
-    callback: "https://YOUR-DOMAIN/callback",
-    secret: "YOUR-BOT-LIST-BOT-TOKEN",
-    clientID: "YOUR-BOT-LIST-BOT-ID", // Bot client id.
+    callback: "https://www.dislist.me/callback",
+    secret: "KQNe3RwR88n9C3gPpYtENcIPyWDff83Y",
+    clientID: "832433849757335554", // Bot client id.
     tags: ["Moderation", "Fun", "Minecraft", "Economy", "Guard", "NSFW", "Anime", "Invite", "Music", "Logging", "Web Dashboard", "Reddit", "Youtube", "Twitch", "Crypto", "Leveling", "Game", "Roleplay", "Utility", "Turkish"],
     languages: [
       { flag: 'gb', code: 'en', name: 'English' },
@@ -131,20 +131,20 @@ module.exports = {
   },
 
   server: {
-    id: "SERVER-ID",
-    invite: "https://discord.gg/YhTU6Akzmy",
-    dblinvite: "YOUR-DISCORD-SERVER-LIST-INVITE-LINK",
+    id: "869599038545231882",
+    invite: "https://discord.gg/eKSXrupNb3",
+    dblinvite: "https://discord.com/oauth2/authorize?client_id=832433849757335554&permissions=1074071617&redirect_uri=https://disbots.n3wbot.repl.co%2Fservers%2Fadd&response_type=code&scope=bot%20identify",
     roles: {
-      yonetici: "", // administrator role id
-      manager: "",
-      booster: "",
-      sponsor: "",
-      community: "",
-      supporter: "",
-      partnerRole: "",
-      site_creator: "",
-      administrator: "",
-      moderator: "",
+      yonetici: "869618538443309056",
+      manager: "869618583779561502",
+      booster: "869618676779859969",
+      sponsor: "869618714650247168",
+      community: "869618824088002700",
+      supporter: "869618863623528498",
+      partnerRole: "869618906493489162",
+      site_creator: "869618945961898025",
+      administrator: "869618538443309056",
+      moderator: "869618980418121798",
       profile: {
         sitecreator:"",
         booster: "",
@@ -165,25 +165,25 @@ module.exports = {
         twentyInvite: "20 INVITES"
       },
       botlist: {
-        ownerserver: "",
-        developer: "",
-        certified_developer: "",
-        boosted_developer: "",
-        promoted_developer: "",
-        premium_developer: "", // premium server owner role id
-        bot: "",
-        boosted_bot: "",
-        promoted_bot: "",
-        certified_bot: ""
+        ownerserver: "869619258366263316",
+        developer: "869619309436100659",
+        certified_developer: "869619359188910140",
+        boosted_developer: "869619377820008478",
+        promoted_developer: "869619465183166465",
+        premium_developer: "869619512310398986", // premium server owner role id
+        bot: "869619560712634488",
+        boosted_bot: "869619599384125471",
+        promoted_bot: "869619648746901504",
+        certified_bot: "869619691340050442"
       }
     },
     channels: {
-      codelog: "",
-      login: "",
-      webstatus: "",
-      uptimelog: "",
-      botlog: "",
-      votes: ""
+      codelog: "869619775725248522",
+      login: "869619830054092841",
+      webstatus: "869619879584616468",
+      uptimelog: "869619927122853960",
+      botlog: "869619992159744010",
+      votes: "869620039270166548"
     }
   }
 

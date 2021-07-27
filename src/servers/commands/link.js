@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
       id: args[0]
     });
     const targetGuild = client.guilds.cache.get(b.id)
-    if (!b) return message.channel.send("This server was not added to our website.\nAdd server https://disbots.xyz/server/add")
+    if (!b) return message.channel.send("This server was not added to our website.\nAdd server https://dislist.me/server/add")
     let invitelink = b.link ? " [Join Server](" + b.link + ")" : "";
     const embed = new Discord.MessageEmbed()
       .setThumbnail(b.icon)
@@ -24,7 +24,7 @@ module.exports.run = async (client, message, args) => {
         , true)
       .setColor("#7289da")
       .addField("Owner(s)", `<@${b.ownerID}>\n${coowner.replace("<@>", "")}`, true)
-      .addField("Invite Link:", `${invitelink || "No Server Invite"}`, true)
+      .addField("Invite Link:", `${invitelink || "No Server Invite, If you are the owner please set a invite from the our website!"}`, true)
 
     message.channel.send(embed)
   }
@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
     let b = await bots.findOne({
       id: message.guild.id
     });
-    if (!b) return message.channel.send("This server was not added to our website.\nAdd server https://disbots.xyz/server/add")
+    if (!b) return message.channel.send("This server was not added to our website.\nAdd server https://dislist.me/server/add")
     const targetGuild = client.guilds.cache.get(b.id)
     let invitelink = b.link ? " [Join Server](" + b.link + ")" : "";
     const embed = new Discord.MessageEmbed()
@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
         , true)
       .setColor("#7289da")
       .addField("Owner(s)", `<@${b.ownerID}>`, true)
-      .addField("Invite Link:", `${invitelink || "No Server Invite"}`, true)
+      .addField("Invite Link:", `${invitelink || "No Server Invite, If you are the owner please set a invite from the our website!"}`, true)
 
     message.channel.send(embed)
   }

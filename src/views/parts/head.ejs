@@ -79,42 +79,42 @@
           <ul class="navbar-nav mainlink mr-auto">
             <% if(!req.originalUrl.includes('/server')) { %>
             <li class="nav-item">
-              <a title="Disbots" class="nav-link nvhome" href="/"><i class="fal fa-home mr-1"></i> Home</a>
+              <a title="DisList.Me HomePage" class="nav-link nvhome" href="/"><i class="fal fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item">
-              <a title="Disbots" class="nav-link" href="/bots"><i class="fal fa-robot mr-1"></i> Bots</a>
+              <a title="DisList.Me Bots" class="nav-link" href="/bots"><i class="fal fa-robot mr-1"></i> Bots</a>
             </li>
 
             <% if(user) {%>
             <li class="nav-item">
-                <a title="Disbots" class="nav-link" href="/addbot"><i class="fal fa-plus mr-1"></i> Add Bot</a>
+                <a title="Add Your Bot Too DisList.Me" class="nav-link" href="/addbot"><i class="fal fa-plus mr-1"></i> Add Bot</a>
             </li>
             <% } %>
             <li class="nav-item">
-                <a title="Disbots" class="nav-link" href="/servers"><i class="fal fa-server mr-1"></i>Servers &nbsp;<span class="badge badge-danger">NEW</span></a>
+                <a title="DisList.Me Servers" class="nav-link" href="/servers"><i class="fal fa-server mr-1"></i>Servers &nbsp;<span class="badge badge-danger">NEW</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News&nbsp;<span class="badge badge-danger">NEW</span></a>
+              <a title="DisList.Me News" class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News&nbsp;<span class="badge badge-danger">NEW</span></a>
             </li>
             <% } else { %>
             <li class="nav-item">
-              <a title="Disbots" class="nav-link nvhome" href="/servers"><i class="fal fa-home mr-1"></i> Home</a>
+              <a title="DisList.Me" class="nav-link nvhome" href="/servers"><i class="fal fa-home mr-1"></i> Home</a>
             </li>
             <li class="nav-item">
-                <a title="Disbots" class="nav-link" href="/servers/tags"><i class="fal fa-tags mr-1"></i> Tags</a>
+                <a title="DisList.Me Tags" class="nav-link" href="/servers/tags"><i class="fal fa-tags mr-1"></i> Tags</a>
             </li>
             <li class="nav-item">
-                <a title="Disbots" class="nav-link" href="/"><i class="fal fa-robot mr-1"></i> Bots</a>
+                <a title="DisList.Me Bots" class="nav-link" href="/"><i class="fal fa-robot mr-1"></i> Bots</a>
             </li>
             <li class="nav-item">
-                <a title="Disbots" class="nav-link" href="/dsl"><i class="fal fa-robot mr-1"></i> Invite DSL</a>
+                <a title="Invite The DisList.Me Bot To Bump Your Server!" class="nav-link" href="/dsl"><i class="fal fa-robot mr-1"></i> Invite DisList.Me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>News&nbsp;<span class="badge badge-danger">NEW</span></a>
             </li>
             <% if(user) {%>
             <li class="nav-item"> 
-                <a title="Disbots" class="nav-link" href="/server/add"><i class="fal fa-plus mr-1"></i> Add Server</a>
+                <a title="DisList.Me" class="nav-link" href="/server/add"><i class="fal fa-plus mr-1"></i> Add Server</a>
             </li>
             <% } %>
             <% } %>
@@ -135,7 +135,7 @@
                 if(guild) {
                 if(guild.roles.cache.get(roles.administrator) || guild.roles.cache.get(roles.moderator)) {
                 %>
-                    <a title="Disbots" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
+                    <a title="DisList.Me" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel</a>
 
                 <% }} %>
             <% } %>
@@ -170,7 +170,7 @@
               </li>
             <% } else { %>
             <li class="nav-item">
-                <a title="Disbots" class="btn btn-vcodes" href="/login"><i class="fal fa-sign-in mr-1"></i> Login</a>
+                <a title="DisList.Me Login" class="btn btn-vcodes" href="/login"><i class="fal fa-sign-in mr-1"></i> Login</a>
             </li>
 	    <% } %>
           </ul>

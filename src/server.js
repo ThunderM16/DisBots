@@ -168,13 +168,13 @@ module.exports = async (client) => {
   }
   app.get("/robots.txt", function(req, res) {
     res.set('Content-Type', 'text/plain');
-    res.send(`Sitemap: https://disbots.xyz/sitemap.xml`);
+    res.send(`Sitemap: https://dislist.me/sitemap.xml`);
   });
   app.get("/sitemap.xml", async function(req, res) {
-    let link = "<url><loc>https://disbots.xyz/</loc></url>";
+    let link = "<url><loc>https://dislist.me/</loc></url>";
     let botdataforxml = await botsdata.find()
     botdataforxml.forEach(bot => {
-      link += "\n<url><loc>https://disbots.xyz/bot/" + bot.botID + "</loc></url>";
+      link += "\n<url><loc>https://dislist.me/bot/" + bot.botID + "</loc></url>";
     })
     res.set('Content-Type', 'text/xml');
     res.send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">${link}</urlset>`);
@@ -206,12 +206,12 @@ module.exports = async (client) => {
           dynamic: true
         })).setThumbnail(a.avatarURL({
           dynamic: true
-        })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://disbots.xyz/user/${a.id}) The user named **site** tried to log in but could not log in because he was blocked from the site.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+        })).setColor("RED").setDescription(`[**${a.username}**#${a.discriminator}](https://dislist.me/user/${a.id}) The user named **site** tried to log in but could not log in because he was blocked from the site.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
       })
       req.session.destroy(() => {
         res.json({
           login: false,
-          message: "You have been blocked from disbots.",
+          message: "You have been blocked from dislist.me.",
           logout: true
         })
         req.logout();
@@ -236,7 +236,7 @@ module.exports = async (client) => {
           dynamic: true
         })).setThumbnail(a.avatarURL({
           dynamic: true
-        })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://disbots.xyz/user/${a.id}) User named **site** logged in.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
+        })).setColor("GREEN").setDescription(`[**${a.username}**#${a.discriminator}](https://dislist.me/user/${a.id}) User named **site** logged in.`).addField("Username", a.username).addField("User ID", a.id).addField("User Discriminator", a.discriminator))
 
       })
     }
@@ -740,12 +740,12 @@ module.exports = async (client) => {
 
     const Hook = new webhook.Webhook("WEBHOOK-URL");
     const msg = new webhook.MessageBuilder()
-      .setName('Disbots | News')
+      .setName('dislist.me | News')
       .setAvatar(req.body.icon)
       .setTitle(req.body.serverName)
-      .setDescription(`<@${req.user.id}> Posted a News \n\nLink:\n[website](https://disbots.xyz/news)`)
+      .setDescription(`<@${req.user.id}> Posted a News \n\nLink:\n[website](https://dislist.me/news)`)
       .setColor('#0099ff')
-      .setFooter(`Copyright © disbots.xyz official 2021`)
+      .setFooter(`Copyright © dislist.me official 2021`)
     Hook.send(msg);
 
 
@@ -820,7 +820,7 @@ module.exports = async (client) => {
   io.on('connection', socket => {
     io.emit("userCount", io.engine.clientsCount);
   });
-  http.listen(3000, () => { console.log("[disbots.xyz]: Website running on 3000 port.") });
+  http.listen(3000, () => { console.log("[dislist.me]: Website running on 3000 port.") });
 
   //------------------- Routers -------------------//
 
@@ -833,17 +833,14 @@ module.exports = async (client) => {
   */
   console.log(`
       [===========================================]
-                       disbots.xyz
-        https://github.com/disbots-xyz/benedict
-                Developed by Claudette
-
-                    Achievements =)
+                       dislist.me
+                     Achievements =)
       [===========================================]
       `)
   console.log("\x1b[32m", "System loading, please wait...")
   sleep(1050)
   console.clear();
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: General routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: General routers loading...");
   sleep(500);
   app.use("/", require('./routers/index.js'))
   app.use("/", require('./routers/partners.js'))
@@ -851,7 +848,7 @@ module.exports = async (client) => {
 
   /* Uptime System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Uptime system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Uptime system routers loading...");
   sleep(500);
   app.use("/uptime", require('./routers/uptime/add.js'))
   app.use("/uptime", require('./routers/uptime/delete.js'))
@@ -859,14 +856,14 @@ module.exports = async (client) => {
 
   /* Profile System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Profile system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Profile system routers loading...");
   sleep(500);
   app.use("/user", require('./routers/profile/index.js'))
   app.use("/user", require('./routers/profile/edit.js'))
 
   /* Code Share System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Code Share system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Code Share system routers loading...");
   sleep(500);
   app.use("/codes", require('./routers/codeshare/view.js'))
   app.use("/codes", require('./routers/codeshare/list.js'))
@@ -874,7 +871,7 @@ module.exports = async (client) => {
 
   /* Botlist System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Botlist system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Botlist system routers loading...");
   sleep(500);
   app.use("/", require('./routers/botlist/addbot.js'))
   app.use("/", require('./routers/botlist/mini.js'))
@@ -886,7 +883,7 @@ module.exports = async (client) => {
 
   /* Server List System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Serverlist system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Serverlist system routers loading...");
   sleep(500);
   app.use("/servers", require('./routers/servers/index.js'))
   app.use("/server", require('./routers/servers/add.js'))
@@ -917,7 +914,7 @@ module.exports = async (client) => {
     }
   })
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Admin Panel system routers loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Admin Panel system routers loading...");
   sleep(500);
   app.use("/", require('./routers/admin/index.js'))
   app.use("/", require('./routers/admin/maintence.js'))
@@ -936,7 +933,7 @@ module.exports = async (client) => {
 
   /* Bot System */
   console.log(" ")
-  console.log('\x1b[36m%s\x1b[0m', "[disbots.xyz]: Bot system loading...");
+  console.log('\x1b[36m%s\x1b[0m', "[dislist.me]: Bot system loading...");
   app.use("/", require('./routers/api/api.js'))
   sleep(500)
 
