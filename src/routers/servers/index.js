@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[disbots.xyz/servers]: Index router loaded.");
+console.log("[dislist.me/servers]: Index router loaded.");
 
 app.get("/", async (req,res) => {
     res.render("servers/index.ejs", {

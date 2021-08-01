@@ -1,4 +1,4 @@
-const socket = io.connect("https://vcodes.xyz");
+const socket = io.connect("https://dislist.me");
 
 socket.on('userCount', userCount => {
 let doc = document.getElementById('connectionCount');

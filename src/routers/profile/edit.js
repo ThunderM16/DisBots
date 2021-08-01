@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 
-console.log("[disbots.xyz]: Profile/Edit router loaded.");
+console.log("[dislist.me]: Profile/Edit router loaded.");
 
 const profiledata = require("../../database/models/profile.js");
 const client = global.Client;

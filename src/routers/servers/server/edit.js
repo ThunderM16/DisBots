@@ -3,7 +3,7 @@ const sdata = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[disbots.xyz/servers]: Edit router loaded.");
+console.log("[DisList.Me/servers]: Edit router loaded.");
 
 app.get("/:guildID/edit", global.checkAuth, async (req, res) => {
     let serverData = await sdata.findOne({

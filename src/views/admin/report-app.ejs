@@ -6,7 +6,7 @@
             <nav class="breadcrumb-one" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="javascript:void(0);">Bot List</a></li>
-                    <li class="breadcrumb-item active"><a href="javascript:void(0);">Boosted Bots</a></li>
+                    <li class="breadcrumb-item active"><a href="javascript:void(0);">Report Apps </a></li>
                 </ol>
             </nav>
         </div>
@@ -18,34 +18,27 @@
                     <table id="default-ordering" class="table table-hover" style="width:100%">
                         <thead>
                             <tr>
-                                <th>Bot Name</th>
-                                <th>Owner</th>
-                                <th>Prefix</th>
-                                <th>Invite</th>
+                                <th>Bot ID</th>
+                                <th>Reason</th>
                                 <th class="text-center dt-no-sorting">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <% botdata.filter(a => a.status == "Approved").map(row => {%>
+                            <% apps.map(b => {%>
                             <tr>
-                                <td><%= row.username %></td>
-                                <td><%= row.ownerName %></td>
-                                <td><%= row.prefix %></td>
-                                <td><button onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=<%= row.botID %>&permissions=0&scope=bot'" class="btn btn-primary btn-sm">Perm 0</button>
-                                    <button onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=<%= row.botID %>&permissions=8&scope=bot" class="btn btn-info btn-sm">Perm 8</button> </td>
+                                <td><%= b.botID %></td>
+                                <td><%= b.reason %></td>                               
                                 <td class="text-center">
-                                        <button onclick="newtab('/admin/boost/give/<%= row.botID %>')" class="btn btn-success btn-sm">give boost</button>
-                                    <button onclick="newtab('/admin/boost/delete/<%= row.botID %>')" class="btn btn-danger btn-sm">remove boost</button>
+                                        <button onclick="window.location.href='/admin/delete/<%= b.botID %>'" class="btn btn-success btn-sm">Delete Bot</button>
+                                        <button onclick="window.location.href='/admin/delete/<%= b.botID %>/report'" class="btn btn-danger btn-sm">Delete Report</button>
                                     </td>
                             </tr>
                             <% }) %>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Bot Name</th>
-                                <th>Owner</th>
-                                <th>Prefix</th>
-                                <th>Invite</th>
+                                <th>Bot ID</th>
+                                <th>Reason</th>
                                 <th class="invisible"></th>
                             </tr>
                         </tfoot>
@@ -61,10 +54,10 @@
          title: 'Succesfull...',
          closeOnConfirm: false,
          text: urlParams.get('message'),
-         footer: 'Copyright 2021 &copy DisList.Me - All right reserved.'
+         footer: 'Copyright 2021 &copy Disbots.xyz - All right reserved.'
         }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = '/admin/boosted-bots';
+        window.location.href = '/admin/report-apps';
       }
     })
         }
@@ -73,10 +66,10 @@
          icon: 'error',
          title: 'Oops...',
          text: urlParams.get('message'),
-         footer: 'Copyright 2021 &copy DisList.Me - All right reserved.'
+         footer: 'Copyright 2021 &copy Disbots.xyz - All right reserved.'
         }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = '/admin/boosted-bots';
+        window.location.href = '/admin/report-apps';
       }    
     })
         }

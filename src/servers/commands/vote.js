@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
 	.setTitle("The correct button has been selected.")
 	.setColor("GREEN")
 	.setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }))
-  .setImage('https://cdn.discordapp.com/attachments/832615475878821939/863623417025527808/Vote.jpg')
+  .setImage('https://media.discordapp.net/attachments/846858660252090438/869881713713631242/ad.gif?width=312&height=40')
 	.setDescription(`You have successfully voted for server **${message.guild.name}**.`)
 
     const controlEmbed = new Discord.MessageEmbed()

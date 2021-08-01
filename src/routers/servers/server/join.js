@@ -3,7 +3,7 @@ const db = require("../../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[disbots.xyz/servers]: Join router loaded.");
+console.log("[dislist.me/servers]: Join router loaded.");
 
 app.get("/:guildID/join", async (req,res) => {
 	let data = await db.findOne({ id: req.params.guildID });

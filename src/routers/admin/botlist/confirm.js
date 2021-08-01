@@ -9,7 +9,7 @@ const roles = global.config.server.roles;
 const channels = global.config.server.channels;
 const client = global.Client;
 
-console.log("[disbots.xyz]: Admin/Botlist/Confirm Bot router loaded.");
+console.log("[DisList.Me]: Admin/Botlist/Confirm Bot router loaded.");
 
 app.get("/admin/confirm/:botID", global.checkAuth, async (req, res) => {
     const botdata = await botsdata.findOne({

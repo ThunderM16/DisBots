@@ -3,7 +3,7 @@ const botsdata = require("../../database/models/botlist/bots.js");
 const servers = require("../../database/models/servers/server.js");
 const client = global.Client;
 
-console.log("[disbots.xyz]: Profile/Index router loaded.");
+console.log("[DisList.Me]: Profile/Index router loaded.");
 
 const profiledata = require("../../database/models/profile.js");
 const banSchema = require("../../database/models/site-ban.js");

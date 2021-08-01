@@ -3,7 +3,7 @@ const botsdata = require("../../../database/models/botlist/bots.js");
 const apps = require("../../../database/models/botlist/certificate-apps.js");
 const client = global.Client;
 
-console.log("[disbots.xyz]: Botlist/Certificate Application router loaded.");
+console.log("[dislist.me]: Botlist/Certificate Application router loaded.");
 
 app.get("/certification/apply", global.checkAuth, async (req, res) => {
     const userbots = await botsdata.find({

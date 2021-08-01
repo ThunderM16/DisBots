@@ -46,7 +46,7 @@ module.exports.run = async (client, message, args) => {
     .setColor("GREEN")
     .setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }))
     .setDescription(`You have successfully voted for bot **${botdata.username}**.`)
-    .setImage('https://cdn.discordapp.com/attachments/832615475878821939/863623417025527808/Vote.jpg')
+    .setImage('https://images-ext-2.discordapp.net/external/qRAPqJC0AtDvAPug13zsuBl_ogafvpbjSnTA7aK-C3o/%3Fwidth%3D312%26height%3D40/https/media.discordapp.net/attachments/846858660252090438/869881713713631242/ad.gif?width=250&height=32')
     message.channel.send({ embed: vote, buttons: [ web ] })
   if (hour <= 0) {
   const votes = require("../database/models/botlist/vote.js");
@@ -99,7 +99,7 @@ module.exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["v","v-b"],
+  aliases: ["v","v-b","vote"],
 };
 
 exports.help = {

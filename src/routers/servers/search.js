@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const db = require("../../database/models/servers/server.js");
 
-console.log("[disbots.xyz/servers]: Search router loaded.");
+console.log("[dislist.me/servers]: Search router loaded.");
 
 app.get("/search", async (req, res) => {
     let page = req.query.page || 1;

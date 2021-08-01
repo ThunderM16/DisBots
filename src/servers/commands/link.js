@@ -49,7 +49,7 @@ module.exports.run = async (client, message, args) => {
         , true)
       .setColor("#7289da")
       .addField("Owner(s)", `<@${b.ownerID}>`, true)
-      .addField("Invite Link:", `${invitelink || "No Server Invite, If you are the owner please set a invite from the our website!"}`, true)
+      .addField("Invite Link:", `${invitelink || "No Server Invite, If you are the owner please set a invite from our website!"}`, true)
 
     message.channel.send(embed)
   }

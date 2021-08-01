@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const db = require("../../database/models/servers/server.js");
 
-console.log("[disbots.xyz/server]: Tag router loaded.");
+console.log("[dislist.me/server]: Tag router loaded.");
 
 app.get("/tag/:tag", async (req, res) => {
     let page = req.query.page || 1;

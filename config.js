@@ -1,11 +1,11 @@
 module.exports = {
   bot: {
-    token: "ODQwOTIyOTYwMTU1NzcwOTAw.YJfQiQ.XXjyE4lTUE0fRI4RVUofukfiZAc",
+    token: "ODQwOTIyOTYwMTU1NzcwOTAw.YJfQiQ.ZHNDJT4628nYMmODIctaQCMFuek",
     prefix: "bl.",
     owners: ["676195747904880690"],
-    mongourl: "mongodb+srv://iut3890g:6BclYy2yHqvs3hKQ@cluster0.sbr9d.mongodb.net/testing2?retryWrites=true&w=majority",
+    mongourl: "mongodb+srv://iut3890g:6BclYy2yHqvs3hKQ@cluster0.sbr9d.mongodb.net/finallylivedislist?retryWrites=true&w=majority",
     servers: {
-      token: "ODMyNDMzODQ5NzU3MzM1NTU0.YHjubw.NhIyqQZkvV_uvTdCSVOD0R26c5c",
+      token: "ODMyNDMzODQ5NzU3MzM1NTU0.YHjubw.jK3izdm6IlZM-DkS3xq-JB2N7Cg",
       prefix: "sl."
     }
   },
@@ -116,7 +116,7 @@ module.exports = {
         },
         {
           icon: "fal fa-laptop",
-          name: "E-Spor"
+          name: "E-Sports"
         },
         {
           icon: 'fal fa-palette',
@@ -133,7 +133,7 @@ module.exports = {
   server: {
     id: "869599038545231882",
     invite: "https://discord.gg/eKSXrupNb3",
-    dblinvite: "https://discord.com/oauth2/authorize?client_id=832433849757335554&permissions=1074071617&redirect_uri=https://disbots.n3wbot.repl.co%2Fservers%2Fadd&response_type=code&scope=bot%20identify",
+    dblinvite: "https://discord.com/oauth2/authorize?client_id=832433849757335554&permissions=1074071617&redirect_uri=https://dislist.me%2Fservers%2Fadd&response_type=code&scope=bot%20identify",
     roles: {
       yonetici: "869618538443309056",
       manager: "869618583779561502",
@@ -146,13 +146,13 @@ module.exports = {
       administrator: "869618538443309056",
       moderator: "869618980418121798",
       profile: {
-        sitecreator:"",
-        booster: "",
-        community: "",
-        sponsor: "",
-        supporter: "",
-        manager: "",
-        partnerRole: ""
+        sitecreator:"676195747904880690",
+        booster: "676195747904880690",
+        community: "676195747904880690",
+        sponsor: "676195747904880690",
+        supporter: "676195747904880690",
+        manager: "676195747904880690",
+        partnerRole: "676195747904880690"
       },
       codeshare: {
         javascript: "JS",

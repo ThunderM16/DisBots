@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
 	.setTitle(`You have successfully bumped for server **${message.guild.name}**.`)
 	.setColor("GREEN")
 	.setAuthor(message.author.username, message.author.avatarURL({ dynamic: true }))
-  .setImage('https://media.discordapp.net/attachments/832615475878821939/863623063358406687/Bump.jpg')
+  .setImage('https://media.discordapp.net/attachments/846858660252090438/869881713713631242/ad.gif?width=312&height=40')
     const controlEmbed = new Discord.MessageEmbed()
     .setTitle("Select the code button that is the same as the picture.")
     .setColor("BLURPLE")

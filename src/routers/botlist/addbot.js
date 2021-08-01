@@ -2,7 +2,7 @@ const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 const client = global.Client;
 const channels = global.config.server.channels;
-console.log("[disbots.xyz]: Botlist/Add Bot router loaded.");
+console.log("[DisList.Me]: Botlist/Add Bot router loaded.");
 
     app.get("/addbot", global.checkAuth, async (req,res) => {
       if(!client.guilds.cache.get(config.server.id).members.cache.get(req.user.id)) return res.redirect("/error?code=403&message=To do this, you have to join our discord server.");
@@ -70,7 +70,7 @@ console.log("[disbots.xyz]: Botlist/Add Bot router loaded.");
       })
       res.redirect(`?success=true&message=Your bot has been successfully added to the system.&botID=${rBody['botID']}`)
       client.users.fetch(rBody['botID']).then(a => {
-      client.channels.cache.get(channels.botlog).send(`<:add:853596640824655872> <@${req.user.id}> added **${a.tag}** \n **https://disbots.xyz/bot/${a.id}/**`)
+      client.channels.cache.get(channels.botlog).send(`<:add:853596640824655872> <@${req.user.id}> added **${a.tag}** \n **https://dislist.me/bot/${a.id}/**`)
       })
     })
 

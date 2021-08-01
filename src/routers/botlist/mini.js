@@ -1,7 +1,7 @@
 const app = require('express').Router();
 const botsdata = require("../../database/models/botlist/bots.js");
 
-console.log("[disbots.xyz]: Botlist/Mini router loaded.");
+console.log("[DisList.Me]: Botlist/Mini router loaded.");
 
 app.get("/certification", async (req, res) => {
     res.render("botlist/apps/certification.ejs", {

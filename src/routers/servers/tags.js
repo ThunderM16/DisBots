@@ -3,7 +3,7 @@ const db = require("../../database/models/servers/server.js");
 const client = global.clientSL;
 const channels = global.config.server.channels;
 
-console.log("[disbots.xyz/servers]: Tags router loaded.");
+console.log("[dislist.me/servers]: Tags router loaded.");
 
 app.get("/tags", async (req,res) => {
     res.render("servers/tags.ejs", {
