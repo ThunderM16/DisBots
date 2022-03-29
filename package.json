@@ -52,7 +52,7 @@
     "sweetalert": "^2.1.2",
     "sweetalert2": "10.15.6",
     "vcodes.js": "1.0.1-renewed",
-    "void.db": "@void.db",
+    "void.db": "void.db",
     "void.nsfw": "^1.0.8-beta",
     "webhook-discord": "^3.7.7"
   },
