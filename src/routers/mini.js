@@ -45,14 +45,14 @@ app.get("/discord", async (req,res) => {
 
 app.get("/robots.txt", function(req, res) {
     res.set('Content-Type', 'text/plain');
-    res.send(`Sitemap: https://disbots.xyz/sitemap.xml`);
+    res.send(`Sitemap: https://dislist.me/sitemap.xml`);
 });
 
 app.get("/sitemap.xml", async function(req, res) {
-    let link = "<url><loc>https://disbots.xyz/</loc></url>";
+    let link = "<url><loc>https://dislist.me/</loc></url>";
     let botdataforxml = await botsdata.find()
     botdataforxml.forEach(bot => {
-        link += "\n<url><loc>https://disbots.xyz/bot/" + bot.botID + "</loc></url>";
+        link += "\n<url><loc>https://dislist.me/bot/" + bot.botID + "</loc></url>";
     })
     res.set('Content-Type', 'text/xml');
     res.send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">${link}</urlset>`);
